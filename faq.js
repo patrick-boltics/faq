@@ -5,7 +5,6 @@ function getURLParameter(name) {
 mycategory = getURLParameter('category');
 myaudience = getURLParameter('audience');
 
-
 //Edit 'key' and 'columns' to connect your spreadsheet
 
 //enter google sheets key here
@@ -15,13 +14,13 @@ var key ="https://docs.google.com/spreadsheets/d/1YSwUAVxuTToBAIsNGboAQY1aJnhBIz
 //punctuation or numbers in your column name
 //"title" is the column name you want to appear in the published table
 var columns = [{
-  "data": "question",
+  "data": "Question",
   "title": "Question"
 }, {
-  "data": "category",
+  "data": "Category",
   "title": "Category"
 }, {
-  "data": "answer",
+  "data": "Answer",
   "title": "Answer"
 }];
 
@@ -43,8 +42,8 @@ $(document).ready(function() {
 
 // create the table container and object
 function writeTable(data){
-
-    $('#demo').html('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container"></table>');
+	var dataTableContainer = $('<table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered table-striped" id="data-table-container"></table>');
+    $('#demo').append(dataTableContainer);
 	
 
 
